@@ -1,0 +1,60 @@
+# Known Gemini hosts
+
+以下は、50の公開Geminiホストのリストで、Solderpunkが認識した順に並んでいます。 すべてのサーバ管理者がメーリングリストに自分のサーバを発表したり、Solderpunkに直接連絡したりしたわけではありません。また、このリストは手作業で管理されているため、発表されたはずのサーバーが見落とされていたり、順番が違っていたりすることがあります。 そのため、このリストは、最初の50台のGeminiサーバーを正確に、歴史的に正しい順番で並べた100％信頼できるリストではありません。 しかし、これはかなり良い近似値であり、これまで存在した中で最も良い近似値である可能性が非常に高いです。
+
+現在、Geminispaceは非常に速いペースで成長しており、手作業でサーバーの完全なリストを維持することは、もはや実用的ではありませんし、非常に有用でもありません。 したがって、このリストはもはや更新されることはなく、主に歴史的な興味でここに保管されています。 GUSサーチエンジンは自動的に生成された既知のホストのリストを提供し、これが現在最も完全で正確なリストとなっています。
+
+=> gemini://geminispace.info/known-hosts geminispace.info に知られているGeminiのホストたち
+
+## 最初の50のGeminiホスト (おおよそ)
+
+=> gemini://gemini.conman.org
+=> gemini://zaibatsu.circumlunar.space
+=> gemini://carcosa.net
+=> gemini://heavysquare.com
+=> gemini://mozz.us
+=> gemini://dgold.eu
+=> gemini://typed-hole.org
+=> gemini://consensus.circumlunar.space
+=> gemini://tilde.black
+=> gemini://tilde.pink
+=> gemini://vger.cloud
+=> gemini://yam655.com
+=> gemini://royniang.com
+=> gemini://konpeito.media
+=> gemini://gemini.68kmentat.com
+=> gemini://gus.guru
+=> gemini://pon.ix.tc
+=> gemini://breadpunk.club
+=> gemini://gem.bestalbumsintheuniverse.com
+=> gemini://vi.rs
+=> gemini://80h.dev
+=> gemini://bleyble.com
+=> gemini://gemini.digiprime.xyz
+=> gemini://freedombone.net5
+=> gemini://earthlight.xyz
+=> gemini://envs.net
+=> gemini://gemini.logfile.ch
+=> gemini://rawtext.club
+=> gemini://gagarin.p4g.club
+=> gemini://gemini.mayvaneday.art gemini://gemini.mayvaneday.art (IPv6オンリー！)
+=> gemini://libraryoferis.org
+=> gemini://kwiecien.us
+=> gemini://gemini.uxq.ch
+=> gemini://ecmelberk.com
+=> gemini://berserk.red
+=> gemini://park-city.club
+=> gemini://jan.bio
+=> gemini://magnacarta.press
+=> gemini://x-z.se
+=> gemini://commie.space
+=> gemini://cybertronica.org
+=> gemini://gemini.ucant.org
+=> gemini://sathariel.tk
+=> gemini://tokeniser.uk
+=> gemini://random-projects.net
+=> gemini://republic.circumlunar.space
+=> gemini://cozylabs.eu
+=> gemini://cosmic.voyage
+=> gemini://makeworld.gq
+=> gemini://otrn.org

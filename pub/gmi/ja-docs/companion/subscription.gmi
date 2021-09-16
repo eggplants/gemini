@@ -1,0 +1,96 @@
+# Geminiページの購読
+
+## イントロダクション
+
+この文書では、AtomやRSSのような本格的なシンジケーション技術がない場合でも、Geminiクライアントが定期的に更新されるGeminiページ (gemlogのインデックスページなど) を「購読」可能にするための規約を説明します。 これは、これらの技術に代わる軽量な技術として、定期的にブックマークをチェックするような面倒なことをしなくても、簡単に追える連載コンテンツを Geminispace で公開するための障壁を低くすることを目的としています。 特に、コンテンツ作成者が作成するであろう、シンプルで、手動で更新される、人間が読めるインデックスページが、特別な変更を必要とせずに購読可能にすることが明確な目標となっています。 この規約は、Atom のようなより複雑な技術よりは明らかに強力ではなく、考えられるすべての使用例において、より複雑な技術ほどには機能しないでしょう。 とはいえ、合理的なユースケースの広い範囲では十分に機能することが期待できます。 この規約は、コンテンツ作成者が希望すればAtomフィードを同時に公開することを妨げるものではなく、むしろ、フィードの作成を容易にするものです。
+
+このドキュメントの残りの部分では、単一の text/gemini ドキュメントを、必要なすべての要素が存在する Atom フィードであるかのように解釈する方法を記述します。 この規約は、クライアントがこの軽量な購読規約とAtomフィードの購読の両方を、簡素なコードベースと一貫したUIでサポートできることを保証し、Atomフィードの簡単な自動生成がいかに可能かを示すためにこの方法で説明されています。この購読の規約のみをサポートする単純なクライアントは、好きなようにAtom 要素を無視することができます。
+
+## feed 要素
+
+text/gemini ドキュメントを取得した URL は、 feed 要素の必須要素である 「id」要素と推奨要素である「link」要素として機能します。
+
+ドキュメント内の単一の # で始まる最初のヘッダー行の内容は、feed 要素の必須要素である「title」要素として機能します。 このため、例えば「My gemlog」や「Gemlog index」ではなく「Abelard Lindsay's gemlog」のように、著者は独自の文脈を提供するタイトルを使用することが推奨されます。
+
+文書中で ## で始まるヘッダー行が、単一の # で始まる最初の行の後、空でない非ヘッダー行の前にある場合、その内容は feed 要素のオプションである「subtitle」要素として機能することがあります。
+
+feed 要素の必須要素である「updated」要素は、関連するすべての entry 要素の必須要素「updated」要素のうち最も新しいものと等しくなるように設定されなければなりません。 ドキュメントからエントリを抽出できなかった場合はfeed 要素は空となり (Atom 規格ではこれが許されています)、 feed 要素の「updated」要素はドキュメントを取得した時刻と等しくなるように設定されなければなりません。
+
+## entry 要素
+
+feed 要素の entry 要素は、そのリンク行が存在する場合にその部分集合から派生します。
+
+URLの後に、最初の10文字がISO 8601形式(YYYY-MM-DDなど)の日付に対応するラベルが続く各リンク行は、1つのエントリーを表します。 この条件を満たさないリンク行は無視されます。
+
+entry要素の必須要素である「id」要素と必須要素である「link」(一般にAtomエントリーでは「link」要素は任意ですが、この規約ではエントリーに 「content」要素を割り当てないので、「rel="alternate"」を持つlink要素は必須となる)は、どちらも対応するリンク行の URL と同じになります。
+
+entry要素に必要な「updated」要素は、対応するリンク行のラベルの最初にある10文字の日付スタンプで示される日付の正午(UTC)です。
+
+entry 要素 に必要な「title」要素は、対応するリンク行のラベルのうち、最初の空白で区切られた要素 (これには必ず日付スタンプが含まれる) を破棄した後に残るものから取得されます。 クライアントは単純に残りをすべて取得することもできますが、ユーザーが例えば「1965-03-23 - Gemini 3 launch successful!」のように日付とタイトルを区切るラベルを使用するという事実を考慮し、いくつかの簡単なサニタイズが試みられることがあります。
+
+## 例
+
+以下のGemini ドキュメントは gemini://gemini.jrandom.net/gemlog/ で配信されていることを想定したものです。
+
+```
+# J. Random Geminautのgemlog
+
+私のGemlogへようこそ！ここでは、毎週金曜日に私のアーバンガーデニングと抽象代数学での冒険について読めます。
+
+## 投稿
+
+=> bokashi.gmi	2020-11-20 - ボカシ肥の初期実験
+=> finite-simple-groups.gmi	2020-11-13 - 有限単純群の理解に挑戦してみる…
+=> balcony.gmi	2020-11-06 - バルコニーガーデンを始めました！
+
+## 他の面白いGemlogたち
+
+=> gemini://example.com/foo/	Abelard Lindsayさんのgemlog
+=> gemini://example.net/bar/	Vladimir Harkonnenさんのgemlog
+=> gemini://example.org/baz/	Case Pollardさんのgemlog
+ 
+=> ../	私のホームページへ戻る
+
+立ち寄ってくれてありがとう！
+```
+
+上の Gemtext は、次の Atom フィードと等価であると解釈できます。
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>J. Random Geminaut's gemlog</title>
+  <link href="gemini://gemini.jrandom.net/gemlog/"/>
+  <updated>2020-11-20T12:00:00Z</updated>
+  <id>gemini://gemini.jrandom.net/gemlog/</id>
+
+  <entry>
+    <title>Early Bokashi composting experiments</title>
+    <link rel="alternate" href="gemini://gemini.jrandom.net/gemlog/bokashmi.gmi"/>
+    <id>gemini://gemini.jrandom.net/gemlog/bokashmi.gmi</id>
+    <updated>2020-11-20T12:00:00Z</updated>
+  </entry>
+
+  <entry>
+    <title>Trying to get to grips with finite simple groups...</title>
+    <link rel="alternate" href="gemini://gemini.jrandom.net/gemlog/finite-simple-groups.gmi"/>
+    <id>gemini://gemini.jrandom.net/gemlog/finite-simple-groups.gmi</id>
+    <updated>2020-11-13T12:00:00Z</updated>
+  </entry>
+
+  <entry>
+    <title>I started a balcony garden!</title>
+    <link rel="alternate" href="gemini://gemini.jrandom.net/gemlog/balcony.gmi"/>
+    <id>gemini://gemini.jrandom.net/gemlog/balcony.gmi</id>
+    <updated>2020-11-06T12:00:00Z</updated>
+  </entry>
+
+</feed>
+```
+
+## 欠点
+
+この規約の主な欠点は、投稿が行われた時間帯や、日付スタンプが有効なタイムゾーンを伝達しないことです。 これにより、軽量サブスクリプションを、毎日複数のアップデートが期待される、ニュース速報、天気予報、交通状況などのフォローのように、(フィードソース内とフィード ソース間の両方で)アップデートの相対順序が重要であるアプリケーションには適しません。 そのようなアプリケーションは、代わりに Atom や RSS のようなより堅牢な購読技術を実装することが強く推奨されます。
+
+この欠点は、「ヒューマンスケール」(human scale、身体尺度)で運営されるGeminispaceの一般的で価値のあるさまざまな活動に深刻な影響を与えることはないと思われます。 例えば、この規約は、ローカルクライアントを使用している個人の読者が、人々の日常生活、趣味、世界情勢に関する意見、レシピ、写真など、時間的に重要でない内容を数日おきに更新するような、厳選された10または20の gemlog を購読するために完全に実行可能です。 水曜日の朝にアリスが書いたこのような内容を、水曜日の夜にボブが書いたものより先に読んだり、各人がいつ記事を書いたかを正確に知ることが重要となることはほとんどないのです。 もし時間帯が投稿内容に関連していれば、著者は必ずそのことに言及するでしょう。

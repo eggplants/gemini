@@ -1,0 +1,6 @@
+# Gemini companion specifications
+
+以下の「コンパニオン仕様」は、中核となるGeminiプロトコル仕様の一部ではないものの、 Geminispace における「良き市民」のための明確なガイドラインを確立し、広く採用された慣習によってGeminiソフトウェアの相互運用性を高めることを目的としたオプションの慣習を記述しています。
+
+=> robots.gmi	Gemini のための robots.txt
+=> subscription.gmi	Geminiページの購読

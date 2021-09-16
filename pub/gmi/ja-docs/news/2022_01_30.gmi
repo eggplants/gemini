@@ -1,0 +1,11 @@
+# 2022-01-30 - Minor specification update (0.16.1)
+
+I have just pushed a very minor update to the official specification.  Two changes were made.
+
+First, a reference to RFC4646 (in regards to the `lang` parameters of the `text/gemini` media type) was replaced with a reference to BCP 47 (equivalent to RFC5646, which has obsoleted RFC4646).
+
+Second, it has been clarified that the "schematic" outline of a Gemini transaction in Section 1.1 does not imply an obligation on the part of clients to wait until a server closes the connection before beginning to handle received content.
+
+Client and server authors should not need to make any software changes to remain compliant after these clarifying changes.
+
+Some less trivial specification changes should be expected in February, along with an overhaul of much of the official Gemini capsule.  Stay tuned!

@@ -1,0 +1,36 @@
+# Cheatsheet for Gemtext
+=> / Return to Index
+## Title
+```
+# Title
+```
+## Heading
+```
+## heading
+```
+## Text
+```
+This is a normal text.
+```
+## Listing
+```
+* 1aaaa
+* 2bbbb
+* 3cccc
+```
+## Blockquotes
+```
+> he says:
+> Heeloooooooooooo woooold!!!!
+```
+## Link
+```
+=> gemini://hogee.com ほげえ
+=> gopher://hugaa.com ふがあ
+```
+## Code
+```
+`󠀭`󠀭`
+echo test
+`󠀭`󠀭`
+```

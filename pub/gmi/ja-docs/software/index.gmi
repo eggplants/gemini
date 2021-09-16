@@ -1,0 +1,134 @@
+# Gemini software
+
+ここにはすべての知られているGemini関連ソフトウェアがリストアップされています。 これらのプログラムの中には、機能しないものや、メンテナンスされていないものがあるかもしれません。これらのプログラムは、自分で評価する必要があります。もし、ここに掲載されていないGeminiソフトウェアを作成された方は、私に solderpunk@posteo.net からご連絡ください。
+
+## サーバー
+
+=> https://git.sr.ht/~yotam/go-gemini-server	A Gemini server written in Go
+=> https://github.com/jgkaplan/gemini-server	A Gemini server written in Node, based on Express
+=> https://github.com/slogemann1/aerozine	Aerozine, a Gemini server written in Rust, focussed on configurability
+=> gemini://qwertqwefsday.eu/agate.gmi		Agate, a Gemini server written in Rust
+=> https://github.com/mk270/blizanci		Blizanci, a Gemini server writen in Erlang
+=> gemini://rwv.io/dezhemini/			Dʒɛmɪni, a Gemini server written in Racket
+=> https://tildegit.org/solderpunk/gegobi	GeGoBi, a Gemini server for Gemini-Gopher bi-hosting
+=> https://github.com/jovoro/geminid/		Geminid, a Gemini server written in C
+=> gemini://glasgow.social/gemini-php		Gemini-PHP, a Gemini server written in PHP
+=> gemini://80h.dev/projects/gemserv/		Gemserve, a Gemini server written in Rust
+=> https://github.com/jfmcbrayer/germinal	Germinal, a Gemini server written in Common Lisp
+=> https://github.com/spc476/GLV-1.12556	GLV-1.12556, a Gemini server (in fact, the first!) written in Lua
+=> gemini://gemini.omarpolo.com/pages/gmid.gmi	gmid, a low-memory Gemini server written in C with interesting security features
+=> https://sr.ht/~sircmpwn/gmnisrv/		gmnisrv, a simple Gemini server written in C11
+=> https://github.com/michael-lazar/jetforce	Jetforce, a Gemini server written in Python
+=> https://tildegit.org/solderpunk/molly-brown	(The Unsinkable) Molly Brown, a Gemini server written in Go
+=> https://github.com/jackdoe/net-gemini	Net-Gemini, a Gemini server written in Go
+=> https://github.com/panicbit/northstar	Northstar, a Rust library for Gemini servers
+=> https://github.com/grisu48/orion		Orion, a Gemini server written in Go
+=> https://git.sr.ht/~julienxx/pollux		Pollux, a Gemini server written in Rust
+=> https://gitlab.com/lambdatronic/space-age	Space Age, a Gemini server written in Clojure
+=> gemini://capsule.usebox.net/spacebeans/	SpaceBeans, a Gemini server written using Scala and Akka streams
+=> https://git.sr.ht/~zethra/stargazer		Stargazer, a concurrent Gemini server written in Rust
+=> https://gitlab.com/lostleonardo/titan2	Titan2, a minimal Gemini server written in Go
+=> gemini://twins.rocketnine.space		Twins, a Gemini server written in Go
+=> https://tildegit.org/solene/vger		Vger, a simplistic and secure Gemini server in C targetting OpenBSD
+
+## クライアント
+
+=> https://tildegit.org/solderpunk/gemini-demo-1	A bare-bones but usable Gemini client in 100 lines of Python
+=> https://tildegit.org/solderpunk/gemini-demo-2	A bare-bones but usable Gemini client in 100 lines of Lua
+=> https://tildegit.org/solderpunk/gemini-demo-3	A bare-bones but usable Gemini client almost 100 lines of Go
+=> https://paste.sr.ht/~jakob/ad8ae9c006145d167eeb89573724c123e20a5094 A Gemini client library in Guile Scheme
+=> https://framagit.org/waweic/gemini-client		A Gemini client for Android
+=> https://git.sr.ht/~yotam/go-gemini			A Gemini client library in Go
+=> https://github.com/makeworld-the-better-one/go-gemini	A more recent fork of the above library
+=> https://github.com/Koshroy/gemclient			A rich Gemini client library in Nim
+=> https://github.com/RangerMauve/agregore-browser	Agregore, a "distributed web" browser supporting Gemini
+=> https://github.com/makeworld-the-better-one/amfora	Amfora, a very feature-rich Gemini client for the terminal
+=> gemini://jeacle.ie/amiga/amigemini/			AmiGemini, a Gemini client for the Commodore Amiga
+=> https://codeberg.org/oppenlab/Ariane			Ariane, a Gemini client for Android
+=> https://github.com/blmayer/astro			Astro, a Gemini client written in shell script
+=> https://sr.ht/~adnano/astronaut/			Astronaut, a terminal Gemini client written in Go
+=> https://git.sr.ht/~julienxx/asuka			Asuka, a ncurses-based Gemini client
+=> https://tildegit.org/solderpunk/AV-98		AV-98, an experimental Gemini client derived from VF-1
+=> https://tildegit.org/acdw/bollux			Bollux, a Gemini client written in pure Bash
+=> http://bombadillo.colorfield.space/			Bombadillo, a multi-protocol client handling Gemini since 2.0.0
+=> https://git.sr.ht/~julienxx/castor			Castor, A graphical Gemini client written in Rust
+=> gemini://en.gmn.clttr.info/cgmnlm.gmi		Cgmnlm, a colorful fork of gmni
+=> https://github.com/snoe/deedum			Deedum, a Gemini client for Android
+=> gemini://gemini.thegonz.net/diohsc/			Diohsc, a terminal Gemini client written in Haskell
+=> https://gitlab.com/baschdel/dragonstone		Dragonstone, a simple GTK Gopher/Gemini client written in Vala
+=> https://github.com/pitr/gemini-ios			Elaho, a Gemini client for iOS
+=> gopher://thelambdalab.xyz/1/projects/elpher/		elpher, a emacs-based Gopher and Gemini client
+=> https://git.sr.ht/~soapdog/fafi-browser		Fafi, a graphical, tabbed client written in Racket
+=> https://github.com/pellertson/gacme			gacme, a Gemini client for plan9's Acme
+=> https://github.com/aaronjanse/gcat			gcat, a `cat`-like Gemini client
+=> https://github.com/makeworld-the-better-one/gemget/	Gemget, a command-line Gemini downloader ala wget
+=> https://www.marmaladefoo.com/pages/geminaut		GemiNaut, a user-friendly GUI client for MS Windows
+=> https://ranfdev.com/projects/geopard/		Geopard, a client written in rust, using the gtk3 toolkit
+=> https://sr.ht/~chambln/gmi/				Gmi, a client written in POSIX-compliant shell
+=> https://github.com/MasterQ32/gurl/			gurl, a `curl`-like Gemini client
+=> https://git.carcosa.net/jmcbray/gusmobile/		Gusmobile, a Gemini client library in Python
+=> https://sr.ht/~sircmpwn/gmni/			gmni, a combined CLI and line-mode client for POSIX/C11
+=> https://github.com/MasterQ32/kristall		Kristall, a graphical Gemini client using Qt
+=> gemini://skyjake.fi/lagrange/			Lagrange, a beautiful graphical Gemini client written in C
+=> gemini://cetacean.club/maj/majc.gmi			majc, a curses client for Gemini written in Rust
+=> https://sr.ht/~nhanb/mcross/				McRoss, a graphical Gemini client written in Python/Tkinter
+=> https://sr.ht/~admicos/moonlander			Moonlander, a very fancy graphical Gemini client written in Rust
+=> https://github.com/jansc/ncgopher			ncgopher, a Gopher and Gemini client written in Rust
+=> https://rhapsode.adrian.geek.nz/			Rhapsode, an "auditory web browser" which supports Gemini
+=> http://lamkins.net/					Ruhroh, a Gemini client written as a POSIX shell script
+=> https://git.sr.ht/~jpgleeson/spawsh			Spwash, a bare-bones Gemini client written in C#
+=> https://github.com/InvisibleUp/twinpeaks		Twin Peaks, a graphical Gemini client written in C#
+=> https://www.autistici.org/interzona/tinmop.html	Tinmop, a distraction free terminal client for Gemini (and Pleroma!)
+=> https://gitgud.io/sathariel/zain			Zain, a graphical Gemini client written in Tcl/Tk
+
+## ブラウザプラグイン
+
+=> gemini://celehner.com/dillo-gemini/			dillo-gemini, a Gemini plugin for the Dillo browser
+=> https://git.sr.ht/~sotirisp/qute-gemini		cute-gemini, a Gemini userscript for Qutebrowser
+
+## エディタ向けのシンタックスハイライト
+
+=> https://git.carcosa.net/jmcbray/gemini.el	text/gemini syntax highlighting for emacs
+=> https://github.com/kakoune-editor/kakoune-extra-filetypes/blob/master/rc/gemini.kak	text/gemini syntax highlighting for kakoune
+=> gemini://ella.wantscuddl.es/gemini-syntax-highlighting-for-kate.xml	text/gemini syntax highlighting for Kate
+=> https://github.com/yzzyx-network/nanorc/blob/master/gemini.nanorc	text/gemini syntax highlighting for nano
+=> https://tildegit.org/sloum/gemini-vim-syntax		text/gemini syntax highlighting for vim
+
+## CGIアプリケーション
+
+=> https://github.com/makeworld-the-better-one/gemlikes	gemlikes, a liking and commenting system
+=> gemini://git.fkfd.me/			git.gmi, a Gemini git frontend
+=> https://github.com/LukeEmmet/GMIToAtomFeed	GMIToAtomFeed, a CGI tool to produce Atom feeds from Gemini index pages
+=> https://sr.ht/~dancek/twinwiki/		Twinwiki, a Gemini wiki edited with sed commands
+
+## フォーマット変換ツール
+
+=> https://github.com/RangerMauve/gemini-to-html	gemini-to-html, a simple Node JS module to convert text/gemini to HTML
+=> https://github.com/huntingb/gemtext-html-converter	gemtext-html-converter, a Gemtext to HTML converter in Python
+=> https://gitlab.com/tslocum/gmitohtml		gmitohtml, a command line tool and daemon for converting txt/gemini to html
+=> https://gitlab.com/tidux/gmi2mkd		gmi2mkd, a Gemtext to Markdown converter in awk
+=> https://github.com/LukeEmmet/html2gmi	html2gmi, a command line application to convert html to text/gemini
+=> https://github.com/makeworld-the-better-one/md2gemini	md2gemini, a Markdown to text/gemini converter
+
+## その他
+
+=> https://sr.ht/~adnano/go-gemini/		A Go library for implementing both clients and servers
+=> https://tildegit.org/solderpunk/agena	Agena, a Gemini-to-Gopher proxy
+=> gemini://gemini.bortzmeyer.org/software/agunua/	Agunua, a Python library for the development of Gemini clients
+=> https://git.sr.ht/~julienxx/atomini	Atomini, a Ruby script to generate an Atom feed from a Gemini map
+=> https://tildegit.org/solderpunk/CAPCOM	CAPCOM, an Atom feed aggregator that outputs text/gemini
+=> https://tildegit.org/solderpunk/gemfeed	Gemfeed, a tool to generate Atom feeds for a directory of text/gemini files
+=> gemini://80h.dev/projects/gemgit/		Gemgit, a tool to generate static Gemini pages for git repos
+=> https://git.nicksphere.ch/gemini2html	gemini2html, a fast text/gemini to HTML converter written in C
+=> https://github.com/RangerMauve/gemini-fetch	gemini-fetch, a simple Node JS module to fetch Gemini content
+=> https://github.com/pitr/gig			Gig, a Gemini application framework in Go
+=> https://github.com/dhuseby/git-remote-gemini	git-remote-gemini, a Git remote helper to clone git repositories over Gemini
+=> https://github.com/CosmicToast/gmi		gmi, a text/gemini parsing library
+=> gemini://calcuode.com/gmisub-readme.gmi	gmisub, a tool to aggregate content from subscribable Gemini pages
+=> gemini://lapacz-kornel.dev/git/gmnigit/	gmnigit, a to generate static Gemini pages for git repositories
+=> https://gmi.sbgodin.fr/htmgem    		HtmGem, a PHP program to convert text/gemini to HTML on the fly
+=> https://github.com/cbrews/ignition		Ignition, a Gemini client library for Python
+=> https://git.sr.ht/~sircmpwn/kineto		Kineto, a single-domain HTTP to Gemini proxy
+=> https://tildegit.org/sloum/spacewalk		Spacewalk, a moku-pona style aggregator for Gemini
+=> https://github.com/ZoeyR/vostok		Vostok, a protocol-agnostic framework supporting Gemini
+=> https://gitlab.com/tslocum/xenia		Xenia, a Gemini web proxy for Android

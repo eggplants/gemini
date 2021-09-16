@@ -1,0 +1,88 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**.gmi"
+      - "**.html"
+      - "**.yml"
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: Install requirements
+        run: |
+          # curl -sO https://notabug.org/tinyrabbit/gmi2html/raw/master/gmi2html
+          wget https://github.com/eggplants/gmi2html/releases/download/v0.4.1-1/gmi2html-x86_64-linux-small -O gmi2html
+          chmod +x gmi2html
+
+          ./gmi2html --version
+
+          echo "  <style>" > style
+          curl -sL https://eggplants.github.io/gemini/style2.css >> style
+          echo "  </style>" >> style
+      - name: Convert *.gmi to *.html
+        run: |
+          mkdir -p ./pub/htm
+          find pub/gmi/* -type d | sed 's_/gmi/_/htm/_' | while read i;do
+            mkdir -p "$i"
+          done
+
+          find -name "*.gmi" -type f | while read -r i; do
+            # frm -> dst
+            o="$(echo "${i/\.gmi/.html}" | sed 's_/gmi/_/htm/_')"
+            echo "$i -> $o"
+
+            # append header
+            echo '
+          <!DOCTYPE html>
+          <head>
+            <meta charset="utf-8"/>' >> "$o"
+
+            # append style css
+            cat style >> "$o"
+            echo '  <title>'"$(basename "$i" | sed "s/\.gmi\$//")"'</title>
+          </head>
+          <body>' >> "$o"
+
+            # gemini, gmi -> https, html
+            sed 's_\.gmi_.html_g;s_=> gemini://_=> https://_g' "$i" \
+              | ./gmi2html --ignore-empty-lines --inline-all >> "$o"
+            echo "</body></html>" >> "$o"
+          done
+      - name: Remove useless files
+        run: |
+          rm gmi2html ./pub/htm/.gitkeep
+      - name: Check
+        run: find pub -type f
+      - name: Archive html + gmi files into tar
+        run: |
+          cd ./pub/htm
+          tar -czf ./../../htm.tar.gz .
+          cd ./../gmi
+          tar -czf ./../../gmi.tar.gz .
+          cd ./../../
+          cp ./docs/* ./pub/htm
+      - name: Upload files to Sourcehut Pages
+        run: |
+          SH_USER=eggplants
+          curl -s --oauth2-bearer "${{ secrets.SH_TOKEN }}" \
+               -F "content=@htm.tar.gz" \
+               "https://pages.sr.ht/publish/${SH_USER}.srht.site" \
+          && echo "published: https://${SH_USER}.srht.site"
+          curl -s --oauth2-bearer "${{ secrets.SH_TOKEN }}" \
+               -F "content=@gmi.tar.gz" \
+               -F "protocol=GEMINI" \
+               https://pages.sr.ht/publish/${SH_USER}.srht.site \
+          && echo "published: gemini://${SH_USER}.srht.site"
+      - name: Upload files to GitHub Sourcehut Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./pub/htm
