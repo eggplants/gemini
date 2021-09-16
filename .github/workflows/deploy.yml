@@ -1,0 +1,31 @@
+name: Deploy
+
+on:
+  push:
+    tags:
+      - '*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@master
+      - name: Convert *.gmi to *.html
+        run: |
+          curl -O https://notabug.org/tinyrabbit/gmi2html/raw/master/gmi2html
+          chmod +x gmi2html
+          for i in **/*.gmi;do
+            ./gmi2html "$i" > "${i/\.gmi/.html}"
+          done
+          rm gmi2html
+      - name: Archive html + gmi files into tar
+        run: |
+          rm -rf .git*
+          cd ..
+          tar zcvf site.tar.gz .
+      - name: Upload files
+        run: |
+          curl --oauth2-bearer "${{ secrets.SH_TOKEN }}" \
+               -Fcontent=@site.tar.gz -Fprotocol=GEMINI \
+               "https://pages.sr.ht/publish/${{ secrets.SH_USER }}.srht.info"
