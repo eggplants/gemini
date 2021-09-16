@@ -22,8 +22,8 @@ jobs:
       - name: Archive html + gmi files into tar
         run: |
           rm -rf .git*
-          cd ..
-          tar zcvf site.tar.gz .
+          cd ../
+          tar zcvf site.tar.gz ./gemini
       - name: Upload files
         run: |
           curl --oauth2-bearer "${{ secrets.SH_TOKEN }}" \
