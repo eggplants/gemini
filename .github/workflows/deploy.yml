@@ -24,18 +24,28 @@ jobs:
       - name: Convert *.gmi to *.html
         run: |
           mkdir -p ./pub/htm
-          find pub/gmi/* -type d | sed 's_/gmi/_/htm/_' | xargs mkdir -p
+          find pub/gmi/* -type d | sed 's_/gmi/_/htm/_' | while read i;do
+            mkdir -p "$i"
+          done
+
           find -name "*.gmi" -type f | while read -r i; do
+            # frm -> dst
             o="$(echo "${i/\.gmi/.html}" | sed 's_/gmi/_/htm/_')"
             echo "$i -> $o"
+
+            # append header
             echo '
           <!DOCTYPE html>
           <head>
             <meta charset="utf-8"/>' >> "$o"
-          cat style >> "$o"           
-          echo '  <title>'"$(basename "$i" | sed "s/\.gmi\$//")"'</title>
+
+            # append style css
+            cat style >> "$o"
+            echo '  <title>'"$(basename "$i" | sed "s/\.gmi\$//")"'</title>
           </head>
           <body>' >> "$o"
+
+            # gemini, gmi -> https, html
             sed 's_\.gmi_.html_g;s_=> gemini://_=> https://_g' "$i" | ./gmi2html --inline-img >> "$o"
             echo "</body></html>" >> "$o"
           done
@@ -47,7 +57,7 @@ jobs:
       - name: Archive html + gmi files into tar
         run: |
           cd ./pub/htm
-          tar -czf ./../../htm.tar.gz .
+          tar -cvf ./../../htm.tar.gz .
           cd ./../gmi
           tar -cvf ./../../gmi.tar.gz .
           cd ./../../
