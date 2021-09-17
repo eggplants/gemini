@@ -18,9 +18,12 @@ jobs:
           find pub/gmi/* -type d | sed 's_/gmi/_/htm/_' | xargs mkdir -p
           find -name "*.gmi" -type f | while read -r i; do
             o="$(echo "${i/\.gmi/.html}" | sed 's_/gmi/_/htm/_')"
+            echo "$i->$o"
             ./gmi2html "$i" > "$o"
           done
           rm gmi2html
+      - name: Check
+        run: find pub -type f
       - name: Archive html + gmi files into tar
         run: |
           tar zcvf htm.tar.gz ./pub/htm
