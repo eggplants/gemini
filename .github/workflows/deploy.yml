@@ -57,9 +57,9 @@ jobs:
       - name: Archive html + gmi files into tar
         run: |
           cd ./pub/htm
-          tar -cvf ./../../htm.tar.gz .
+          tar -czf ./../../htm.tar.gz .
           cd ./../gmi
-          tar -cvf ./../../gmi.tar.gz .
+          tar -czf ./../../gmi.tar.gz .
           cd ./../../
       - name: Upload files
         run: |
