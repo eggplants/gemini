@@ -9,8 +9,8 @@
 ## WHAT?
 
 - Publish gmi documents to sourcehut automatically:
-  - `gemini://${USERNAME}.srht.site`
-  - `https://${USERNAME}.srht.site`
+  -[gemini://eggplants.srht.site](https://portal.mozz.us/gemini/eggplants.srht.site)
+  -[https://eggplants.srht.site](https://eggplants.srht.site)
 
 ## Step
 
