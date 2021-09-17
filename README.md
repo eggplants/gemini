@@ -23,6 +23,11 @@
 7. CI works by pushing your commits to repo or running [manually](https://docs.github.com/en/actions/managing-workflow-runs/manually-running-a-workflow#running-a-workflow)
 8. Deployed!
 
+## Demo
+
+![image](https://user-images.githubusercontent.com/42153744/133748288-6a480f25-a5d0-4db8-b1dc-7d8dcebbcab7.png)
+![image](https://user-images.githubusercontent.com/42153744/133748511-67fc69d5-e564-4be6-ac6b-a214fe42cf3a.png)
+
 ## CheatSheet for writing Gemtext
 
 ```gmi
