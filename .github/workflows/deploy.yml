@@ -21,11 +21,10 @@ jobs:
           rm gmi2html
       - name: Archive html + gmi files into tar
         run: |
-          rm -rf .git*
-          cd ../
-          tar zcvf site.tar.gz ./gemini
+          tar zcvf site.tar.gz ./pub
       - name: Upload files
         run: |
           curl --oauth2-bearer "${{ secrets.SH_TOKEN }}" \
-               -Fcontent=@site.tar.gz -Fprotocol=GEMINI \
+               -F "content=@site.tar.gz" \
+               -F "protocol=GEMINI" \
                "https://pages.sr.ht/publish/${{ secrets.SH_USER }}.srht.info"
