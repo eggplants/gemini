@@ -13,19 +13,25 @@ jobs:
         uses: actions/checkout@master
       - name: Convert *.gmi to *.html
         run: |
-          curl -O https://notabug.org/tinyrabbit/gmi2html/raw/master/gmi2html
+          curl -sO https://notabug.org/tinyrabbit/gmi2html/raw/master/gmi2html
           chmod +x gmi2html
+          find pub/gmi/* -type d | sed 's_/gmi/_/htm/_' | xargs mkdir -p
           for i in **/*.gmi;do
-            ./gmi2html "$i" > "${i/\.gmi/.html}"
+            ./gmi2html "$i" > `echo "${i/\.gmi/.html}" | sed 's_/gmi/_/htm/_'`
           done
           rm gmi2html
       - name: Archive html + gmi files into tar
         run: |
-          tar zcvf site.tar.gz ./pub
+          tar zcvf htm.tar.gz ./pub/htm
+          tar zcvf gmi.tar.gz ./pub/gmi
       - name: Upload files
         run: |
           curl -s --oauth2-bearer "${{ secrets.SH_TOKEN }}" \
-               -F "content=@site.tar.gz" \
+               -F "content=@htm.tar.gz" \
+               "https://pages.sr.ht/publish/${{ secrets.SH_USER }}.srht.site" \
+          && echo "published: https://${{ secrets.SH_USER }}.srht.site"
+          curl -s --oauth2-bearer "${{ secrets.SH_TOKEN }}" \
+               -F "content=@gmi.tar.gz" \
                -F "protocol=GEMINI" \
                "https://pages.sr.ht/publish/${{ secrets.SH_USER }}.srht.site" \
           && echo "published: gemini+https://${{ secrets.SH_USER }}.srht.site"
