@@ -29,13 +29,9 @@
 # Title
 ## heading
 Hello! This is...
-- 1aaaa
-- 2bbbb
-- 3cccc
-OR...
-* 4aaaa
-* 5bbbb
-* 6cccc
+* 1aaaa
+* 2bbbb
+* 3cccc
 > he says:
 > Heeloooooooooooo woooold!!!!
 ## Link

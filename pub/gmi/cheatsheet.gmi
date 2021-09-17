@@ -14,15 +14,9 @@ This is a normal text.
 ```
 ## Listing
 ```
-- 1aaaa
-- 2bbbb
-- 3cccc
-
-OR...
-
-* 4aaaa
-* 5bbbb
-* 6cccc
+* 1aaaa
+* 2bbbb
+* 3cccc
 ```
 ## Blockquotes
 ```
