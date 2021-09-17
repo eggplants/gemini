@@ -35,4 +35,4 @@ jobs:
                -F "content=@gmi.tar.gz" \
                -F "protocol=GEMINI" \
                "https://pages.sr.ht/publish/${{ secrets.SH_USER }}.srht.site" \
-          && echo "published: gemini+https://${{ secrets.SH_USER }}.srht.site"
+          && echo "published: gemini://${{ secrets.SH_USER }}.srht.site"
