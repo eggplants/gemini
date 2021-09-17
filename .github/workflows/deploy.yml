@@ -16,7 +16,7 @@ jobs:
           curl -sO https://notabug.org/tinyrabbit/gmi2html/raw/master/gmi2html
           chmod +x gmi2html
           find pub/gmi/* -type d | sed 's_/gmi/_/htm/_' | xargs mkdir -p
-          for i in **/*.gmi;do
+          find -name "*.gmi" -type f | while read -r i; do
             o="$(echo "${i/\.gmi/.html}" | sed 's_/gmi/_/htm/_')"
             ./gmi2html "$i" > "$o"
           done
