@@ -46,3 +46,20 @@ OR...
 echo test
 `󠀭``
 ```
+
+## TIPS
+
+- install [asuka](https://git.sr.ht/~julienxx/asuka) (TUI client)
+
+```bash
+git clone --depth 1 https://git.sr.ht/~julienxx/asuka
+cd asuka
+command -v cargo >/dev/null {
+  curl https://sh.rustup.rs -sSf | sh
+  source $HOME/.cargo/env
+}
+cargo build --release
+sudo install -m+x target/release/asuka /usr/local/bin
+asuka
+```
+
