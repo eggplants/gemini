@@ -4,6 +4,6 @@ Hello World!
 
 ## Links
 
-=> gemini://eggplants.srht.site/cheatsheet.gmi My Gemtext cheatsheet
+=> /cheatsheet.gmi My Gemtext cheatsheet
 => gemini://gemini.circumlunar.space Project Gemini
-=> gemini://eggplants.srht.site/a/test.gmi Test page for checking a hierarchical structure
+=> /a/test.gmi Test page for checking a hierarchical structure
