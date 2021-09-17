@@ -1,10 +1,7 @@
 # Index page
-
 Hello World!
-
 ## Links
-
 => gemini://gemini.circumlunar.space Project Gemini
-
+<hr>
 => /cheatsheet.gmi Gemtext cheatsheet
 => /a/test.gmi Test page for checking a hierarchical structure
