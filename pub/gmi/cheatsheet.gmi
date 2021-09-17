@@ -1,6 +1,6 @@
 # Cheatsheet for Gemtext
 
-=> gemini://eggplants.srht.site Return to Index
+=> / Return to Index
 
 ## Title
 

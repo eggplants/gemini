@@ -4,6 +4,7 @@ Hello World!
 
 ## Links
 
-=> /cheatsheet.gmi My Gemtext cheatsheet
 => gemini://gemini.circumlunar.space Project Gemini
+
+=> /cheatsheet.gmi Gemtext cheatsheet
 => /a/test.gmi Test page for checking a hierarchical structure

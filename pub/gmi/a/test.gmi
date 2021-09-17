@@ -1,4 +1,3 @@
 Hello World! test!
 
-=> gemini://eggplants.srht.site Return to Index
-=> gemini://gemini.circumlunar.space Project Gemini
+=> / Return to Index
