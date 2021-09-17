@@ -59,7 +59,7 @@ jobs:
                "https://pages.sr.ht/publish/${SH_USER}.srht.site" \
           && echo "published: https://${SH_USER}.srht.site"
           curl -s --oauth2-bearer "${{ secrets.SH_TOKEN }}" \
-               -Fcontent=@gmi.tar.gz \
-               -Fprotocol=GEMINI \
+               -F "content=@gmi.tar.gz" \
+               -F "protocol=GEMINI" \
                https://pages.sr.ht/publish/${SH_USER}.srht.site \
           && echo "published: gemini://${SH_USER}.srht.site"
