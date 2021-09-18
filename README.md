@@ -79,7 +79,7 @@ else
   wget https://git.io/JztqW
   ail-cli integrate Lagrange-*
 fi
-lagrange
+xdg-open gemini://eggplants.srht.site
 ```
 
 ![image](https://user-images.githubusercontent.com/42153744/133888463-50eb6156-b79f-4032-8cbd-14cff8be6e66.png)
