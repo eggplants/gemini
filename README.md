@@ -64,3 +64,22 @@ asuka
 ```
 
 ![asuka](https://user-images.githubusercontent.com/42153744/133748511-67fc69d5-e564-4be6-ac6b-a214fe42cf3a.png)
+
+- install [laglange] (GUI client)
+
+```bash
+if command -v brew >/dev/null; then
+  brew install --cask lagrange
+else
+  command -v ail-cli >/dev/null || {
+    sudo add-apt-repository ppa:appimagelauncher-team/stable
+    sudo apt update
+    sudo apt install appimagelauncher -y 
+  }
+  wget https://git.io/JztqW
+  ail-cli integrate Lagrange-*
+fi
+lagrange
+```
+
+![image](https://user-images.githubusercontent.com/42153744/133888463-50eb6156-b79f-4032-8cbd-14cff8be6e66.png)
