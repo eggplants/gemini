@@ -54,7 +54,7 @@ echo test
 ```bash
 git clone --depth 1 https://git.sr.ht/~julienxx/asuka
 cd asuka
-command -v cargo >/dev/null {
+command -v cargo >/dev/null || {
   curl https://sh.rustup.rs -sSf | sh
   source $HOME/.cargo/env
 }
