@@ -25,7 +25,7 @@
 
 ## CheatSheet for writing Gemtext
 
-```gmi
+```markdown
 # Title
 ## heading
 Hello! This is...
