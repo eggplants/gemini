@@ -11,9 +11,8 @@ I'm japanese and live in Tsukuba, Japan. I like baked 🍆 with soy sause.
 
 ## Contents
 
-=> /ja-docs Japanese Translation of gemini documentations
-=> /cheatsheet.gmi Gemtext cheatsheet
-=> /a/test.gmi Test page for checking a hierarchical structure
+=> /ja-docs/ Japanese Translation of gemini documentations
+=> /cheatsheet.gmi Gemtext cheatsheet for my own
 
 ## Links
 
