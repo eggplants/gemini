@@ -20,7 +20,7 @@ jobs:
           wget https://github.com/shtanton/gmi2html/releases/download/v0.4.0/gmi2html
           chmod +x gmi2html
           echo "  <style>" > style
-          curl -s https://eggplants.github.io/gemini/style2.css >> style
+          curl -sL https://eggplants.github.io/gemini/style2.css >> style
           echo "  </style>" >> style
       - name: Convert *.gmi to *.html
         run: |
