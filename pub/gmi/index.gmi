@@ -1,7 +1,21 @@
-# Index page
-Hello World!
-## Links
-=> gemini://gemini.circumlunar.space Project Gemini
+# 🍆
 
+This site is generated eggplants/gemini and hosted on sourcehut.
+
+=> https://github.com/eggplants/gemini Solution to manage Gemini contents with GitHub CI
+=> https://eggplants.srht.site/ Same contents are being hosted on HTTP
+
+## Profile
+
+I'm japanese and live in Tsukuba, Japan. I like baked 🍆 with soy sause.
+
+## Contents
+
+=> /ja-docs Japanese Translation of gemini documentations
 => /cheatsheet.gmi Gemtext cheatsheet
 => /a/test.gmi Test page for checking a hierarchical structure
+
+## Links
+
+=> https://github.com/eggplants My GitHub Page
+=> gemini://gemini.circumlunar.space Project Gemini

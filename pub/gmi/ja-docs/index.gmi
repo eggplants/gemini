@@ -1,0 +1,18 @@
+# Gemini Protocol documentation
+
+## コアドキュメント
+
+=> faq.gmi		Project GeminiについてのFAQ
+=> specification.gmi	プロトコルの仕様
+=> best-practices.gmi	Geminiを実装してみたい人のためのベストプラクティス
+=> companion/		コンパニオン仕様
+
+## 初心者向けのリソース
+
+=> gemtext.gmi		「gemtext」によるマークアップの簡単な紹介
+=> cheatsheet.gmi	Gemtext チートシート
+=> tls-tutorial.gmi	Geminiを中心とした優しいTLS証明書ガイド
+
+## 翻訳
+
+=> translations.gmi	上記のドキュメントを他言語に翻訳するボランティア

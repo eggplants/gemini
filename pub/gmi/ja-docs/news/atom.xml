@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>gemini://gemini.circumlunar.space/news/</id>
+  <title>Official Project Gemini news feed</title>
+  <updated>2022-06-20T17:48:06.479966+00:00</updated>
+  <author>
+    <name>Solderpunk</name>
+    <email>solderpunk@posteo.net</email>
+  </author>
+  <link href="gemini://gemini.circumlunar.space/news/atom.xml" rel="self"/>
+  <link href="gemini://gemini.circumlunar.space/news/" rel="alternate"/>
+  <generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator>
+  <entry>
+    <id>gemini://gemini.circumlunar.space/news/2022_01_16.gmi</id>
+    <title>2022-01-16 - Mailing list downtime, official news feed</title>
+    <updated>2022-01-16T16:10:48.445244+00:00</updated>
+    <link href="gemini://gemini.circumlunar.space/news/2022_01_16.gmi" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>gemini://gemini.circumlunar.space/news/2022_01_22.gmi</id>
+    <title>2022-01-22 - Mailing list archives, Atom feed for official news</title>
+    <updated>2022-01-22T18:44:56.495170+00:00</updated>
+    <link href="gemini://gemini.circumlunar.space/news/2022_01_22.gmi" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>gemini://gemini.circumlunar.space/news/2022_01_30.gmi</id>
+    <title>2022-01-30 - Minor specification update (0.16.1)</title>
+    <updated>2022-01-30T14:38:04.738832+00:00</updated>
+    <link href="gemini://gemini.circumlunar.space/news/2022_01_30.gmi" rel="alternate"/>
+  </entry>
+  <entry>
+    <id>gemini://gemini.circumlunar.space/news/2022_06_20.gmi</id>
+    <title>2022-06-20 - Three years of Gemini!</title>
+    <updated>2022-06-20T17:48:06.479966+00:00</updated>
+    <link href="gemini://gemini.circumlunar.space/news/2022_06_20.gmi" rel="alternate"/>
+  </entry>
+</feed>

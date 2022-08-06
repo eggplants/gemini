@@ -1,0 +1,11 @@
+# 2022-06-20 - Three years of Gemini!
+
+Today, the 20th of June 2022, is the third anniversary of the Gemini project!  Or at least, the third anniversary of the public announcing of the project under that name - arguably the very first seeds were planted just a little earlier, but it's hard to put a concrete date on anything earlier than this, so for official celebration purposes, today is the day.  Somewhat astonishingly, we have now outlived our namesake!  Gemini 1 was launched as an uncrewed test in April 1964, and the final flight, Gemini 12, splashed down in November 1966, less than three years later.
+
+It would be difficult to deny that the third year of the project's life has been the least eventful by a large margin, if we restrict our attention to the official and the visible.  I kind of wonder if anybody will believe me anymore when I say things like this, but I really do still care, and want things to get better, and feel bad about how poorly I was able to handle the explosive surge of attention which marked Gemini's second year.  It's true.
+
+But I also think it's easy to overstate just how bad things are.  Despite the loss of the mailing list, despite the glacial pace of refinements to the protocol specification, statistics provided by the Lupa crawler suggest that since the FAQ was last updated a little over a year ago, the number of Gemini capsules has more than doubled, so too has the number of unique domains hosting Gemini content, and the number of unique IP addresses didn't quite double but got close.  Despite the shortcomings of communication and leadership, people are still finding out about Gemini, they are still finding it compelling enough in its current state to want to try it out, and they are finding enough software and documentation and community assistance out there to set up capsules.
+
+I'm not clutching at straws here.  Slow, organic, grass-roots growth of Geminispace is absolutely the most important thing for the project, and I consider the fact that it is happening without strong official outreach or coordination to be a genuine sign of health.  Thank you to everybody who has done things, small or large, to help keep Gemini healthy.
+
+Let's keep those capsules flying!

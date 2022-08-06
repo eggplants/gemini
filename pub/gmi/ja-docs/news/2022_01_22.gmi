@@ -1,0 +1,16 @@
+# 2022-01-22 - Mailing list archives, Atom feed for official news
+
+## Mailing list mirrors
+
+A few folk in the Gemini community have already stepped up and released archives of the official mailing list.  There are links below.  There are two web-based archvies that you can browse in, well, your browser, and also two places you can download files for local viewing over Gemini.  If you know of additional mirrors, please feel free to contact me.  I am grateful that so many people have been so quick to act on this!
+
+=> gemini://nytpu.com/gemlog/2021-12-31.gmi Downloadable archives courtesy of Alex / nytpu
+=> gemini://rawtext.club/~nervuri/gemini-archive/mailing-list/ Downloadable archives courtesy of nervuri
+=> https://archive.transjovian.org/gemini/	Browsable web archive courtesy of Alex Schroeder / the Transjovian Council
+=> https://lists.sr.ht/~adnano/gemini	Browsable web archive courtes of adano
+
+## Atom feed for official news
+
+This official news gemlog now has an Atom feed.  There's a link below and also at the index.  The index is also formatted according to the subscription companion protocol, so you can also subscribe using a client which supports that.
+
+=> atom.xml	Official Project Gemini news feed in Atom format

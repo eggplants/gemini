@@ -1,0 +1,10 @@
+# 2022-01-16 - Mailing list downtime, official news feed
+
+Many in the Gemini community have noted that the mailing list has been down since toward the end of 2021.  The downtime is due to a hardware failure associated with the list's server.  The mailing list service was provided to the Gemini project free of charge by a volunteer admin, for which I have always been very grateful and because of which I hold no strong expectations regarding uptime.  Since the outage, the mailing list admin and I have been discussing a plan to move forward.  The mailing list downtime will probably end up serving as the catalyst for some change in terms of the role the list plays in the project, which I had been planning for some time anyway.  It is not yet 100% clear what or where the future of the list will be.
+
+In order that I can continue to have some way to make obviously official announcements regarding the project which can reach all interested parties, I have created an - arguably long overdue - "news" section of the official Gemini capsule.  An Atom feed for this section will appear shortly.  Changes to the specification and other important news will now be announced here (possibly in addition to other venues in the future).  Please help to spread the word about the appearance of this news section throughout the community.
+
+I would like to reassure everybody that whatever the future of the mailing list is, I and many others in the community who have reached out to me since the list went down have offline archives of posts made to the list stretching back its beginning.  I am confident that collectively we have complete coverage of the list's history and that these will eventually be made available so that nothing is "lost".
+
+
+
