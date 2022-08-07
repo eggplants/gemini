@@ -17,7 +17,8 @@ jobs:
       - name: Install requirements
         run: |
           # curl -sO https://notabug.org/tinyrabbit/gmi2html/raw/master/gmi2html
-          wget https://github.com/shtanton/gmi2html/releases/download/v0.4.0/gmi2html
+          wget https://github.com/eggplants/gmi2html/releases/download/v0.4.1-1/gmi2html-x86_64-linux-small
+          mv gmi2html-x86_64-linux-small gmi2html
           chmod +x gmi2html
           echo "  <style>" > style
           curl -sL https://eggplants.github.io/gemini/style2.css >> style
