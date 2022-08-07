@@ -49,7 +49,7 @@ jobs:
 
             # gemini, gmi -> https, html
             sed 's_\.gmi_.html_g;s_=> gemini://_=> https://_g' "$i" \
-              | ./gmi2html --inline-all >> "$o"
+              | ./gmi2html --ignore-empty-lines --inline-all >> "$o"
             echo "</body></html>" >> "$o"
           done
       - name: Remove useless files
