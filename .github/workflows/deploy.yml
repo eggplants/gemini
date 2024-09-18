@@ -25,7 +25,7 @@ jobs:
           ./gmi2html --version
 
           echo "  <style>" > style
-          curl -sL https://eggplants.github.io/gemini/style2.css >> style
+          cat ./docs/style2.css >> style
           echo "  </style>" >> style
       - name: Convert *.gmi to *.html
         run: |
